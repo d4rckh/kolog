@@ -1,0 +1,20 @@
+{
+  "name": "kolog",
+  "version": "1.0.0",
+  "description": "A node module that helps you to log easier and organized",
+  "main": "src/index.js",
+  "author": "ndr3w221 <kalaz.bb@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "jsdoc": "jsdoc ./src"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "events": "^3.0.0",
+    "figures": "^2.0.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
+  }
+}
