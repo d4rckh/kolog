@@ -29,4 +29,4 @@ logger.info('info')
 
 ```
 
-Docs: [node-kolog.github.io](node-kolog.github.io)
+Docs: [https://node-kolog.github.io](https://node-kolog.github.io)
