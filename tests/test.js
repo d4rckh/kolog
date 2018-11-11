@@ -1,18 +1,7 @@
 var Kolog = require('../src/index.js')
 
-var logger = new Kolog.Logger({scope: 'normal logs'})
-
-console.log('--LOGGER--')
-
-logger.log('genericLog')
-logger.warn('Warning')
-logger.error('error')
-logger.success('success')
-logger.info('info')
-
-
-var custom = new Kolog.customLogger({
-    scope: 'custom logs',
+var logger = new Kolog.Logger({
+    scope: 'my scope',
     types: [
         {
             emoji: '**',
@@ -23,14 +12,18 @@ var custom = new Kolog.customLogger({
         {
             emoji: '!!',
             color: 'green',
-            name: 'suck',
+            name: 'newsuck',
             prefix: ' NEW SUCK! ',
-            scope: 'sucks'
+            scope: 'sucks',
+            template: 'new suck by {text}'
         }
     ]
 })
 
-console.log('--CUSTOM LOGGER--')
-
-custom.fatalError('Fatal error')
-custom.suck('new suck by andrew')
+logger.log('genericLog')
+logger.warn('Warning')
+logger.error('error')
+logger.success('success')
+logger.info('info')
+logger.fatalError('Fatal error')
+logger.newsuck('andrew')
