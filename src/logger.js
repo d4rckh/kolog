@@ -13,7 +13,7 @@ var log = require('./log/log')
  * @param {string} opts.types[].prefix whats the prefix of the text
  * @param {string} [opts.types[].scope=customLogger.scope] the scope, the default scope is <logger>.scope 
  */
-function Logger(opts) {
+function Logger(opts={}) {
 
     var l = new base(opts)
 

@@ -12,7 +12,7 @@ class Logger {
   constructor(opts = {}) {
     if (opts.catchErrors) {
       process.on('uncaughtException', function (exception) {
-        error(exception)
+        this.error(exception)
       });
     }
 
