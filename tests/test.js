@@ -2,7 +2,7 @@ var Kolog = require('../src/index.js')
 
 var logger = new Kolog.Logger()
 
-logger.log('generic log')
+logger.log('Using kolog v' + Kolog.version)
 logger.warn('Warning')
 logger.error('error')
 logger.success('success')

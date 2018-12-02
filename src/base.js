@@ -39,6 +39,12 @@ class Logger {
      * @private
      */
     this.eventEmitter = new emitter()
+
+    /**
+     * @type {Stream}
+     * The stream to write
+     */
+    this.stream = opts.stream || process.stdout
   }
 
   /**
@@ -51,7 +57,7 @@ class Logger {
       color: 'white',
       scope: this.scope,
       emoji: ''
-    })) 
+    }, this)) 
   }
 
   /**
@@ -64,7 +70,7 @@ class Logger {
       color: 'yellow',
       scope: this.scope,
       emoji: this.figures.warning
-    }))
+    }, this))
   }
 
   /**
@@ -95,7 +101,7 @@ class Logger {
         color: 'red',
         scope: this.scope,
         emoji: this.figures.cross
-      }))
+      }, this))
   }
 
   /**
@@ -108,7 +114,7 @@ class Logger {
       color: 'green',
       scope: this.scope,
       emoji: this.figures.tick
-    }))
+    }, this))
   }
 
   /**
@@ -121,7 +127,7 @@ class Logger {
       color: 'blue',
       scope: this.scope,
       emoji: this.figures.info
-    }))
+    }, this))
   }
 }
 
